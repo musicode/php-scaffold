@@ -94,22 +94,29 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     // App\Action 根目录
     $terms = [ 'App', 'Action' ];
-    foreach (explode('/', $path) as $term) {
-        $term = trim($term);
-        if ($term) {
-            $terms[] = ucfirst(Strings::toCamelCase($term));
+
+    // 默认主页
+    if ($path === '/') {
+        $terms[] = 'Index';
+    }
+    // 按 path 结构映射本地目录结构
+    else {
+        foreach (explode('/', $path) as $term) {
+            $term = trim($term);
+            if ($term) {
+                $terms[] = ucfirst(Strings::toCamelCase($term));
+            }
         }
     }
 
     // 所有 Action 文件名以 Action 结尾
     $ActionClass = implode('\\', $terms) . 'Action';
 
-    $this->logger->info($ActionClass);
-
     if (class_exists($ActionClass)) {
         new $ActionClass($request, $response);
     }
     else {
+        $this->logger->notice('Action not found');
         $response = $response->withStatus(404, 'Not Found');
     }
 
