@@ -23,3 +23,10 @@ function get_file_by_env($file) {
 function require_file_by_env($file) {
     return require(get_file_by_env($file));
 }
+
+/**
+ * @return {int} 当前时间的毫秒数
+ */
+function getTimestamp() {
+    return intval(microtime(true) * 1000);
+}
