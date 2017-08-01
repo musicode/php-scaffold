@@ -25,7 +25,14 @@ function require_file_by_env($file) {
 }
 
 /**
- * @return {int} 当前时间的毫秒数
+ * 获取当前时间的毫秒数
+ *
+ * 毫秒有两个好处：
+ *
+ * 1. 与前端统一时间单位
+ * 2. 能应付大多数场景，比如打点计时
+ *
+ * @return {int}
  */
 function getTimestamp() {
     return intval(microtime(true) * 1000);

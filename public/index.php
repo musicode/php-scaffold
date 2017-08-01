@@ -3,9 +3,11 @@
 require 'vendor/autoload.php';
 require 'app/function.php';
 
+// 不写类型没有代码提示...
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
+// 日志库
 use Monolog\Logger;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\BufferHandler;
@@ -128,3 +130,4 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 });
 
 $app->run();
+
