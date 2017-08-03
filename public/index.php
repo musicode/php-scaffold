@@ -2,10 +2,12 @@
 
 require 'vendor/autoload.php';
 require 'app/function.php';
+require 'app/constant/env.php';
+require 'app/constant/userRole.php';
 
 // 不写类型没有代码提示...
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
+use Slim\Http\Request;
+use Slim\Http\Response;
 
 // 日志库
 use Monolog\Logger;
@@ -26,10 +28,6 @@ mb_http_output('UTF-8');
 mb_regex_encoding('UTF-8');
 
 // 定义环境
-define('ENV_DEV', 'dev');
-define('ENV_TEST', 'test');
-define('ENV_BETA', 'beta');
-define('ENV_PROD', 'prod');
 define('ENV', ENV_DEV);
 
 // 定义常用目录

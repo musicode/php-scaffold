@@ -23,95 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+      <file leaf-file-name="env.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/constant/env.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="42" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="2645">
-              <folding>
-                <element signature="e#84#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logger.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="557" column="26" selection-start="14845" selection-end="14851" vertical-scroll-proportion="0.0" vertical-offset="7899" max-vertical-offset="11273">
+            <state line="8" column="27" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IpAddress.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/akrabat/rka-ip-address-middleware/src/IpAddress.php">
+      <file leaf-file-name="userRole.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/constant/userRole.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="6" selection-start="745" selection-end="745" vertical-scroll-proportion="-0.6" vertical-offset="420" max-vertical-offset="3463">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AggregateStreamHandler.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/component/AggregateStreamHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="20" selection-start="135" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1235">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="23.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/dev/2017-08-01/23.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="16" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1733">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="00.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/dev/2017-08-02/00.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1433">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="22" selection-start="745" selection-end="758" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1265">
-              <folding>
-                <element signature="e#7#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="-13.2" vertical-offset="0" max-vertical-offset="1059">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexAction.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="36" selection-start="66" selection-end="66" vertical-scroll-proportion="0.09677419" vertical-offset="0" max-vertical-offset="695">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotFoundAction.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/action/NotFoundAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1013">
+            <state line="10" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="755">
               <folding />
             </state>
           </provider>
@@ -142,9 +66,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/action/IndexAction.php" />
         <option value="$PROJECT_DIR$/app/action/NotFoundAction.php" />
-        <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
         <option value="$PROJECT_DIR$/app/function.php" />
         <option value="$PROJECT_DIR$/app/component/AggregateStreamHandler.php" />
+        <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
+        <option value="$PROJECT_DIR$/app/constant/userRole.php" />
+        <option value="$PROJECT_DIR$/app/constant/env.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
@@ -198,6 +124,98 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,25 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="component" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-scaffold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
+              <option name="myItemId" value="constant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,7 +383,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="5" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
           <folding>
-            <element signature="e#84#139#0" expanded="true" />
+            <element signature="e#153#175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -403,7 +403,9 @@
     <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="195">
-          <folding />
+          <folding>
+            <element signature="e#30#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -565,27 +567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1073">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/function.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="22" selection-start="745" selection-end="758" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1265">
           <folding>
             <element signature="e#7#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="42" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="2645">
-          <folding>
-            <element signature="e#84#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -599,7 +585,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="66" selection-end="66" vertical-scroll-proportion="0.09677419" vertical-offset="0" max-vertical-offset="695">
+        <state line="6" column="1" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.43548387" vertical-offset="0" max-vertical-offset="935">
+          <folding>
+            <element signature="e#30#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.5322581" vertical-offset="0" max-vertical-offset="2615">
+          <folding>
+            <element signature="e#153#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/constant/env.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/constant/userRole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.24193548" vertical-offset="0" max-vertical-offset="755">
           <folding />
         </state>
       </provider>
