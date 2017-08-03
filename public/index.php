@@ -94,7 +94,7 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     $path = $request->getUri()->getPath();
 
-    // App\Action 根目录
+    // 所有 Action 都位于 app/action 目录下
     $terms = [ 'App', 'Action' ];
 
     // 默认主页
@@ -115,6 +115,8 @@ $app->add(function (Request $request, Response $response, Callable $next) {
     $ActionClass = implode('\\', $terms) . 'Action';
 
     if (class_exists($ActionClass)) {
+        // 一个请求映射一个 Action
+        // Action 负责请求的全流程
         new $ActionClass($request, $response);
     }
     else {
