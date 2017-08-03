@@ -115,8 +115,8 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     if (class_exists($ActionClass)) {
         // 一个请求映射一个 Action
-        $action = new $ActionClass();
-        $response = $action->execute($request, $response);
+        $action = new $ActionClass($request, $response);
+        $response = $action->execute();
     }
     else {
         $this->logger->notice('Action not found');

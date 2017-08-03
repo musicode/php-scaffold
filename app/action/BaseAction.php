@@ -7,16 +7,24 @@ use Slim\Http\Response;
 
 class BaseAction {
 
+    protected $request;
+    protected $response;
 
-    public function execute(Request $request, Response $response) {
+    protected $params;
+
+    public function __construct(Request $request, Response $response) {
+        $this->request = $request;
+        $this->response = $response;
 
         $params = $request->getParams();
-
         if (!isset($params['access_token'])) {
             $params['access_token'] = $request->getCookieParam('access_token');
         }
+        $this->params = $params;
 
+    }
 
+    public function execute() {
 
     }
 
