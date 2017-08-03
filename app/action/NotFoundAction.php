@@ -1,9 +1,7 @@
 <?php
 
-
 namespace App\Action;
 
-
-class NotFoundAction {
+class NotFoundAction extends BaseAction {
 
 }

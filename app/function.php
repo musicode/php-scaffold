@@ -20,6 +20,12 @@ function get_file_by_env($file) {
         . ($extname ? '.' . $extname : '');
 }
 
+/**
+ * 区分环境的文件大多是配置文件，因此提供一个函数直接读取配置
+ *
+ * @param {string} file
+ * @return {Array}
+ */
 function require_file_by_env($file) {
     return require(get_file_by_env($file));
 }
@@ -34,6 +40,6 @@ function require_file_by_env($file) {
  *
  * @return {int}
  */
-function getTimestamp() {
+function get_timestamp() {
     return intval(microtime(true) * 1000);
 }

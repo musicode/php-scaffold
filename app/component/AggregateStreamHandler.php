@@ -21,7 +21,7 @@ class AggregateStreamHandler extends StreamHandler {
         $log = sprintf(
             "\n[%s][%sms][%s]%s %s %s\n",
             date('Y-m-d H:i:s', TIME_REQUEST_START / 1000),
-            number_format(getTimestamp() - TIME_REQUEST_START),
+            number_format(get_timestamp() - TIME_REQUEST_START),
             ID_REQUEST,
             $request->getAttribute('ip_address'),
             $request->getMethod(),

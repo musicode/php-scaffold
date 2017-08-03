@@ -2,8 +2,6 @@
 
 namespace App\Action;
 
-class IndexAction {
-    public function __construct($request, $response) {
-        var_dump(213);
-    }
+class IndexAction extends BaseAction {
+
 }

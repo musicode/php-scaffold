@@ -28,6 +28,7 @@ mb_regex_encoding('UTF-8');
 // 定义环境
 define('ENV_DEV', 'dev');
 define('ENV_TEST', 'test');
+define('ENV_BETA', 'beta');
 define('ENV_PROD', 'prod');
 define('ENV', ENV_DEV);
 
@@ -37,7 +38,7 @@ define('DIR_PUBLIC', DIR_ROOT . '/public');
 define('DIR_APP', DIR_ROOT . '/app');
 
 // 请求开始的时间戳
-define('TIME_REQUEST_START', getTimestamp());
+define('TIME_REQUEST_START', get_timestamp());
 
 // 为每个请求分配一个唯一 ID
 // 请求内部其他服务时，带上这个 request id，这样便可以把一次请求串起来，方便排查问题
@@ -116,8 +117,8 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     if (class_exists($ActionClass)) {
         // 一个请求映射一个 Action
-        // Action 负责请求的全流程
-        new $ActionClass($request, $response);
+        $action = new $ActionClass();
+        $response = $action->execute($request, $response);
     }
     else {
         $this->logger->notice('Action not found');
