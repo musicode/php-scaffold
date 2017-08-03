@@ -28,7 +28,7 @@ mb_http_output('UTF-8');
 mb_regex_encoding('UTF-8');
 
 // 定义环境
-define('ENV', ENV_DEV);
+define('ENV', App\Constant\Env::ENV_DEV);
 
 // 定义常用目录
 define('DIR_ROOT', dirname(__DIR__));

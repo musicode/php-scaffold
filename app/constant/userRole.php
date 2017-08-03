@@ -1,10 +1,16 @@
 <?php
 
-define('USER_ROLE_GUEST', -1);
+namespace App\Constant;
 
-define('USER_ROLE_SIGNED', 0);
+class UserRole {
 
-define('USER_ROLE_OWNER', 9);
+    const USER_ROLE_GUEST = -1;
 
-define('USER_ROLE_ADMIN', 10);
+    const USER_ROLE_SIGNED = 0;
+
+    const USER_ROLE_OWNER = 9;
+
+    const USER_ROLE_ADMIN = 10;
+
+}
 

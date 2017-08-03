@@ -1,9 +1,15 @@
 <?php
 
-define('ENV_DEV', 'dev');
+namespace App\Constant;
 
-define('ENV_TEST', 'test');
+class Env {
 
-define('ENV_BETA', 'beta');
+    const ENV_DEV = 'dev';
 
-define('ENV_PROD', 'prod');
+    const ENV_TEST = 'test';
+
+    const ENV_BETA = 'beta';
+
+    const ENV_PROD = 'prod';
+
+}
