@@ -115,7 +115,9 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     if (class_exists($ActionClass)) {
         // 一个请求映射一个 Action
+        // 通常 Action 是非常薄的一层，只用于权限、参数校验，业务逻辑最终通过调用 service 层实现
         $action = new $ActionClass($request, $response);
+        // 处理完之后，获取改写后的 response
         $response = $action->execute();
     }
     else {

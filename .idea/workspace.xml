@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="54" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="2624">
+            <state line="128" column="39" selection-start="3411" selection-end="3411" vertical-scroll-proportion="2.1939588" vertical-offset="540" max-vertical-offset="2654">
               <folding>
                 <element signature="e#153#175#0" expanded="true" />
               </folding>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseAction.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseAction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.5484897" vertical-offset="0" max-vertical-offset="1064">
+            <state line="36" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1199">
               <folding>
                 <element signature="e#30#52#0" expanded="true" />
               </folding>
@@ -112,8 +112,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/constant/UserRole.php" />
         <option value="$PROJECT_DIR$/app/constant/Env.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
@@ -568,20 +568,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="54" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="2624">
+        <state line="36" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1199">
           <folding>
-            <element signature="e#153#175#0" expanded="true" />
+            <element signature="e#30#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.5484897" vertical-offset="0" max-vertical-offset="1064">
+        <state line="128" column="39" selection-start="3411" selection-end="3411" vertical-scroll-proportion="2.1939588" vertical-offset="540" max-vertical-offset="2654">
           <folding>
-            <element signature="e#30#52#0" expanded="true" />
+            <element signature="e#153#175#0" expanded="true" />
           </folding>
         </state>
       </provider>
