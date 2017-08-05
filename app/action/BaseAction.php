@@ -6,6 +6,11 @@ use Slim\Container;
 
 class BaseAction {
 
+    /**
+     * CI 容器
+     *
+     * @type {Slim\Container}
+     */
     protected $container;
 
     /**
@@ -14,6 +19,13 @@ class BaseAction {
      * @type {Array}
      */
     protected $params;
+
+    /**
+     * 参数校验
+     *
+     * @type {Array}
+     */
+    protected $validator;
 
     /**
      * 处理后的返回对象
@@ -37,6 +49,12 @@ class BaseAction {
         }
         $this->params = $params;
 
+        $container->logger->info('Request Params', $params);
+
+    }
+
+    protected function validate($validators, $values) {
+        
     }
 
     public function execute() {

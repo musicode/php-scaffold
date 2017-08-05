@@ -86,7 +86,7 @@ $app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));
 
 $app->add(function (Request $request, Response $response, Callable $next) {
 
-    $this->logger->info('Request Start', $request->getParams());
+    $this->logger->info('Request Start');
 
     // 方便 Nginx 日志和 php 日志串起来
     $response = $response->withHeader('Request-Id', ID_REQUEST);
@@ -115,7 +115,7 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     if (class_exists($ActionClass)) {
         // 一个请求映射一个 Action
-        // 通常 Action 是非常薄的一层，只用于权限、参数校验，业务逻辑最终通过调用 service 层实现
+        // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
         // 处理完之后，获取改写后的 response
         $response = $action->execute();
