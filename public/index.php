@@ -49,7 +49,7 @@ $app = new \Slim\App([
 $container = $app->getContainer();
 $container['errorHandler'] = function ($container) {
     return function ($request, $response, Exception $exception) use ($container) {
-        $container->get('logger')->error($exception->getMessage());
+        $container->get('logger')->error('Exception: ' . $exception->getMessage());
         return $response->withStatus(500)
             ->withHeader('Content-Type', 'text/html')
             ->write('Something went wrong!');
@@ -116,7 +116,7 @@ $app->add(function (Request $request, Response $response, Callable $next) {
     if (class_exists($ActionClass)) {
         // 一个请求映射一个 Action
         // 通常 Action 是非常薄的一层，只用于权限、参数校验，业务逻辑最终通过调用 service 层实现
-        $action = new $ActionClass($request, $response);
+        $action = new $ActionClass($this);
         // 处理完之后，获取改写后的 response
         $response = $action->execute();
     }
