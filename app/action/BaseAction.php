@@ -20,23 +20,9 @@ class BaseAction {
      */
     protected $params;
 
-    /**
-     * 参数校验
-     *
-     * @type {Array}
-     */
-    protected $validator;
-
-    /**
-     * 处理后的返回对象
-     *
-     * @type {Slim\Http\Response}
-     */
-    protected $response;
-
     public function __construct(Container $container) {
+
         $this->container = $container;
-        $this->response = $container->response;
 
         // 合并 GET 和 POST 参数
         $params = $container->request->getParams();
@@ -53,12 +39,42 @@ class BaseAction {
 
     }
 
-    protected function validate($validators, $values) {
-        
+    /**
+     * 参数校验，只验证扁平结构，即不能数组里面包含数组，如有复杂数组需要校验，请多次调用 validate()
+     *
+     * @param $validators
+     * @param $values
+     * @param $stopOnError
+     */
+    protected function validate($validators, $values, $stopOnError = true) {
+
+        // 校验库是 https://github.com/Respect/Validation，超级强大，连上传文件都能校验...
+        $errors = false;
+
+        foreach ($validators as $key => $validator) {
+            if (!$validator[0]($values[$key])) {
+                if ($errors === false) {
+                    $errors = [ ];
+                }
+                $errors[$key] = $validator[1];
+                if ($stopOnError) {
+                    break;
+                }
+            }
+        }
+
+        return $errors === false ? true : $errors;
+
     }
 
-    public function execute() {
-        return $this->response;
+    protected function renderJson($code, $data, $msg = '') {
+        $output = [
+            'code' => $code,
+            'data' => $data,
+            'msg' => $msg,
+            'ts' => get_timestamp(),
+        ];
+        return $this->container->response->withJson($output, 200);
     }
 
 }
