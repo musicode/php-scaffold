@@ -52,7 +52,7 @@ class BaseAction {
         $errors = false;
 
         foreach ($validators as $key => $validator) {
-            if (!$validator[0]($values[$key])) {
+            if (!$validator[0](isset($values[$key]) ? $values[$key] : null)) {
                 if ($errors === false) {
                     $errors = [ ];
                 }

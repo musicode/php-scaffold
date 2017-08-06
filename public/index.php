@@ -84,7 +84,7 @@ $container['logger'] = function ($container) {
 
 $app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));
 
-$app->add(function (Request $request, Response $response, Callable $next) {
+$app->add(function (Request $request, Response $response) {
 
     $this->logger->info('Request Start');
 
@@ -126,9 +126,15 @@ $app->add(function (Request $request, Response $response, Callable $next) {
     }
 
     // 正常结束的请求会打印 request end
-    $this->logger->info('Request End');
+    $this->logger->info(
+        'Request End',
+        [
+            'status' => $response->getStatusCode(),
+            'body' => $response->getBody(),
+        ]
+    );
 
-    return $next($request, $response);
+    return $response;
 
 });
 

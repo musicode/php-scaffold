@@ -15,7 +15,7 @@ class IndexAction extends BaseAction {
             ],
             $this->params
         );
-var_dump($result);
+
         if ($result === true) {
             return $this->renderJson(Code::SUCCESS, $result);
         }
