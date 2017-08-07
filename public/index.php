@@ -48,11 +48,11 @@ $app = new \Slim\App([
 
 $container = $app->getContainer();
 $container['errorHandler'] = function ($container) {
-    return function ($request, $response, Exception $exception) use ($container) {
-        $container->get('logger')->error('Exception: ' . $exception->getMessage());
-        return $response->withStatus(500)
-            ->withHeader('Content-Type', 'text/html')
-            ->write('Something went wrong!');
+    return function (Request $request, Response $response, Exception $exception) use ($container) {
+        $code = $exception->getCode();
+        $message = $exception->getMessage();
+        $container->logger->error('Exception: [' . $code . '] ' . $message);
+        return $response->withJson(get_response_json($code, [], $message), 200);
     };
 };
 $container['logger'] = function ($container) {
@@ -84,7 +84,7 @@ $container['logger'] = function ($container) {
 
 $app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));
 
-$app->add(function (Request $request, Response $response) {
+$app->add(function (Request $request, Response $response, Callable $next) {
 
     $this->logger->info('Request Start');
 
@@ -126,13 +126,7 @@ $app->add(function (Request $request, Response $response) {
     }
 
     // 正常结束的请求会打印 request end
-    $this->logger->info(
-        'Request End',
-        [
-            'status' => $response->getStatusCode(),
-            'body' => $response->getBody(),
-        ]
-    );
+    $this->logger->info('Request End');
 
     return $response;
 

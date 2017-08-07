@@ -6,7 +6,9 @@
         "respect/validation": "^1.1",
         "ramsey/uuid": "^3.6",
         "akrabat/rka-ip-address-middleware": "^0.5.0",
-        "filp/whoops": "^2.1"
+        "filp/whoops": "^2.1",
+        "fpdo/fluentpdo": "^1.1",
+        "predis/predis": "^1.1"
     },
     "autoload": {
         "psr-4": {

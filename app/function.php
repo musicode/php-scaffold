@@ -43,3 +43,19 @@ function require_file_by_env($file) {
 function get_timestamp() {
     return intval(microtime(true) * 1000);
 }
+
+/**
+ * 获取返回的 json 数据
+ *
+ * @param $code 请用 App\Constant\Code 里面的常量
+ * @param $data
+ * @param $message
+ */
+function get_response_json($code, $data, $message = '') {
+    return [
+        'code' => $code,
+        'data' => $data,
+        'msg' => $message,
+        'ts' => get_timestamp(),
+    ];
+}

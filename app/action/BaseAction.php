@@ -45,6 +45,7 @@ class BaseAction {
      * @param $validators
      * @param $values
      * @param $stopOnError
+     * @return 当校验成功时，返回 true，校验失败时，返回错误信息的数组
      */
     protected function validate($validators, $values, $stopOnError = true) {
 
@@ -67,14 +68,15 @@ class BaseAction {
 
     }
 
-    protected function renderJson($code, $data, $msg = '') {
-        $output = [
-            'code' => $code,
-            'data' => $data,
-            'msg' => $msg,
-            'ts' => get_timestamp(),
-        ];
-        return $this->container->response->withJson($output, 200);
+    /**
+     * 渲染 json 数据
+     *
+     * @param $code 请用 App\Constant\Code 里面的常量
+     * @param $data
+     * @param $message
+     */
+    protected function renderJson($code, $data, $message = '') {
+        return $this->container->response->withJson(get_response_json($code, $data, $message), 200);
     }
 
 }
