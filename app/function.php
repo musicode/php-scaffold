@@ -15,7 +15,7 @@
  */
 function get_file_by_env($file) {
     $extname = pathinfo($file, PATHINFO_EXTENSION);
-    return pathinfo($file, PATHINFO_DIRNAME) . DIRECTORY_SEPARATOR
+    return pathinfo($file, PATHINFO_DIRNAME) . DS
         . pathinfo($file, PATHINFO_FILENAME) . '.' . ENV
         . ($extname ? '.' . $extname : '');
 }
@@ -51,7 +51,7 @@ function get_timestamp() {
  * @param $data
  * @param $message
  */
-function get_response_json($code, $data, $message = '') {
+function format_response($code, $data, $message = '') {
     return [
         'code' => $code,
         'data' => $data,

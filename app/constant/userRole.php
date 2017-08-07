@@ -4,13 +4,20 @@ namespace App\Constant;
 
 class UserRole {
 
-    const USER_ROLE_GUEST = -1;
+    /**
+     * 游客
+     */
+    const GUEST = -1;
 
-    const USER_ROLE_SIGNED = 0;
+    /**
+     * 已登录
+     */
+    const SIGNED = 0;
 
-    const USER_ROLE_OWNER = 9;
-
-    const USER_ROLE_ADMIN = 10;
+    /**
+     * 资源的拥有者
+     */
+    const OWNER = 9;
 
 }
 

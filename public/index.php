@@ -28,9 +28,10 @@ mb_http_output('UTF-8');
 mb_regex_encoding('UTF-8');
 
 // 定义环境
-define('ENV', App\Constant\Env::ENV_DEV);
+define('ENV', App\Constant\Env::DEV);
 
 // 定义常用目录
+define('DS', DIRECTORY_SEPARATOR);
 define('DIR_ROOT', dirname(__DIR__));
 define('DIR_PUBLIC', DIR_ROOT . '/public');
 define('DIR_APP', DIR_ROOT . '/app');
@@ -52,7 +53,10 @@ $container['errorHandler'] = function ($container) {
         $code = $exception->getCode();
         $message = $exception->getMessage();
         $container->logger->error('Exception: [' . $code . '] ' . $message);
-        return $response->withJson(get_response_json($code, [], $message), 200);
+        $response->write(
+            json_encode(format_response($code, [], $message))
+        );
+        return $response;
     };
 };
 $container['logger'] = function ($container) {
@@ -63,9 +67,9 @@ $container['logger'] = function ($container) {
 
     // 以日期为目录
     // 每一天的目录下按小时拆分文件
-    $path = $settings['dir'] . DIRECTORY_SEPARATOR
-        . ENV . DIRECTORY_SEPARATOR
-        . date('Y-m-d') . DIRECTORY_SEPARATOR
+    $path = $settings['dir'] . DS
+        . ENV . DS
+        . date('Y-m-d') . DS
         . date('H') . '.log';
 
     $logger = new Logger($settings['name']);
@@ -79,6 +83,19 @@ $container['logger'] = function ($container) {
     $logger->pushHandler(new BufferHandler($handler));
 
     return $logger;
+
+};
+$container['db'] = function ($container) {
+
+    $settings = $container->get('settings')['db'];
+
+    $pdo = new PDO(
+        "mysql:host=${settings['host']};port=${settings['port']};dbname=${settings['name']};",
+        $settings['username'],
+        $settings['password']
+    );
+
+    return new FluentPDO($pdo);
 
 };
 
@@ -117,8 +134,9 @@ $app->add(function (Request $request, Response $response, Callable $next) {
         // 一个请求映射一个 Action
         // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
-        // 处理完之后，获取改写后的 response
-        $response = $action->execute();
+        $result = $action->execute();
+        $this->logger->info('Execute result: ', $result);
+        $response->write(json_encode($result));
     }
     else {
         $this->logger->notice('Action not found');

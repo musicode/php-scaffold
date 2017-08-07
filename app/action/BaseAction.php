@@ -53,30 +53,21 @@ class BaseAction {
         $errors = false;
 
         foreach ($validators as $key => $validator) {
-            if (!$validator[0](isset($values[$key]) ? $values[$key] : null)) {
-                if ($errors === false) {
-                    $errors = [ ];
-                }
-                $errors[$key] = $validator[1];
-                if ($stopOnError) {
-                    break;
+            for ($i = 0, $len = count($validator); $i < $len; $i += 2) {
+                if (!$validator[$i](isset($values[$key]) ? $values[$key] : null)) {
+                    if ($errors === false) {
+                        $errors = [ ];
+                    }
+                    $errors[$key] = $validator[$i + 1];
+                    if ($stopOnError) {
+                        break;
+                    }
                 }
             }
         }
 
         return $errors === false ? true : $errors;
 
-    }
-
-    /**
-     * 渲染 json 数据
-     *
-     * @param $code 请用 App\Constant\Code 里面的常量
-     * @param $data
-     * @param $message
-     */
-    protected function renderJson($code, $data, $message = '') {
-        return $this->container->response->withJson(get_response_json($code, $data, $message), 200);
     }
 
 }

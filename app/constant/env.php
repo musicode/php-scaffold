@@ -4,12 +4,12 @@ namespace App\Constant;
 
 class Env {
 
-    const ENV_DEV = 'dev';
+    const DEV = 'dev';
 
-    const ENV_TEST = 'test';
+    const TEST = 'test';
 
-    const ENV_BETA = 'beta';
+    const BETA = 'beta';
 
-    const ENV_PROD = 'prod';
+    const PROD = 'prod';
 
 }

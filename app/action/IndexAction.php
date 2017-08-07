@@ -11,16 +11,24 @@ class IndexAction extends BaseAction {
 
         $result = $this->validate(
             [
-                'name' => [ Validator::alnum()->noWhitespace()->length(3, 5), '缺少 name' ]
+                'name' => [
+                    Validator::alnum()->notEmpty(), '缺少 name',
+                    Validator::alnum()->noWhitespace()->length(2, 10), 'name 不合法'
+                ]
             ],
             $this->params
         );
 
-        if ($result === true) {
-            return $this->renderJson(Code::SUCCESS, $result);
+        if ($result !== true) {
+            return $this->renderJson(Code::PARAM_INVALID, $result);
         }
 
-        return $this->renderJson(Code::PARAM_INVALID, $result);
+        $query = $this->container->db->from('common_area');
+
+        echo $query;
+
+
+        return format_response(Code::PARAM_INVALID, $result);
 
     }
 }

@@ -11,8 +11,9 @@ return [
   ],
   'db' => [
       'host' => 'localhost',
-      'user' => 'user',
-      'pass' => 'password',
-      'dbname' => 'xxx',
+      'port' => 3306,
+      'username' => 'root',
+      'password' => '',
+      'name' => 'jrd',
   ]
 ];
