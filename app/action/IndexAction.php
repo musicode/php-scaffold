@@ -20,15 +20,12 @@ class IndexAction extends BaseAction {
         );
 
         if ($result !== true) {
-            return $this->renderJson(Code::PARAM_INVALID, $result);
+            return format_response(Code::PARAM_INVALID, $result);
         }
 
-        $query = $this->container->db->from('common_area');
+        $query = $this->container->db->from('common_area')->where('id < ?', 1010);
 
-        echo $query;
-
-
-        return format_response(Code::PARAM_INVALID, $result);
+        return format_list_response(Code::SUCCESS, $query->fetchAll(), 1, 100, 10);
 
     }
 }

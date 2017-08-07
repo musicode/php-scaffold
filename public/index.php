@@ -135,6 +135,7 @@ $app->add(function (Request $request, Response $response, Callable $next) {
         // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
         $result = $action->execute();
+
         $this->logger->info('Execute result: ', $result);
         $response->write(json_encode($result));
     }

@@ -59,3 +59,30 @@ function format_response($code, $data, $message = '') {
         'ts' => get_timestamp(),
     ];
 }
+
+/**
+ * 可翻页的列表数据返回结构
+ *
+ * @param $code 请用 App\Constant\Code 里面的常量
+ * @param $list 当前页的数据
+ * @param $page 当前页码
+ * @param $pageSize 每页多少条数据
+ * @param $totalSize 总数据量
+ * @param $message
+ */
+function format_list_response($code, $list, $page, $pageSize, $totalSize, $message = '') {
+    return [
+        'code' => $code,
+        'data' => [
+            'list' => $list,
+            'pager' => [
+                'page' => $page,
+                'count' => ceil($totalSize / $pageSize),
+                'page_size' => $pageSize,
+                'total_size' => $totalSize,
+            ]
+        ],
+        'msg' => $message,
+        'ts' => get_timestamp(),
+    ];
+}
