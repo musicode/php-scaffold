@@ -2,8 +2,6 @@
 
 require 'vendor/autoload.php';
 require 'app/function.php';
-require 'app/constant/env.php';
-require 'app/constant/userRole.php';
 
 // 不写类型没有代码提示...
 use Slim\Http\Request;
@@ -54,7 +52,7 @@ $container['errorHandler'] = function ($container) {
         $message = $exception->getMessage();
         $container->logger->error('Exception: [' . $code . '] ' . $message);
         $response->write(
-            json_encode(format_response($code, [], $message))
+            json_encode(format_error_response($code, $message))
         );
         return $response;
     };
@@ -90,12 +88,30 @@ $container['db'] = function ($container) {
     $settings = $container->get('settings')['db'];
 
     $pdo = new PDO(
-        "mysql:host=${settings['host']};port=${settings['port']};dbname=${settings['name']};",
+        "mysql:host=${settings['host']};port=${settings['port']};dbname=${settings['dbname']};charset=${settings['charset']}",
         $settings['username'],
         $settings['password']
     );
 
     return new FluentPDO($pdo);
+
+};
+$container['redis'] = function ($container) {
+
+    $settings = $container->get('settings')['redis'];
+
+    $options = [
+        'scheme' => 'tcp',
+        'host'   => $settings['host'],
+        'port'   => $settings['port'],
+    ];
+
+    // redis 比较奇怪，传了空密码会报错
+    if ($settings['password'] !== '') {
+        $options['password'] = $settings['password'];
+    }
+
+    return new Predis\Client($options);
 
 };
 
@@ -135,14 +151,13 @@ $app->add(function (Request $request, Response $response, Callable $next) {
         // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
         $result = $action->execute();
-
-        $this->logger->info('Execute result: ', $result);
-        $response->write(json_encode($result));
     }
     else {
-        $this->logger->notice('Action not found');
-        $response = $response->withStatus(404, 'Not Found');
+        $result = format_error_response(\App\Constant\Code::RESOURCE_NOT_FOUND, 'Action not found');
     }
+
+    $this->logger->info('Execute result: ', $result);
+    $response->write(json_encode($result));
 
     // 正常结束的请求会打印 request end
     $this->logger->info('Request End');

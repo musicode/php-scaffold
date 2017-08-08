@@ -23,9 +23,14 @@ class IndexAction extends BaseAction {
             return format_response(Code::PARAM_INVALID, $result);
         }
 
-        $query = $this->container->db->from('common_area')->where('id < ?', 1010);
+//        // 测试 db
+//        $query = $this->container->db->from('common_area')->where('id < ?', 1010);
+//
+//        return format_response(Code::SUCCESS, $query->fetchAll());
 
-        return format_list_response(Code::SUCCESS, $query->fetchAll(), 1, 100, 10);
+        // 测试 redis
+        $this->container->redis->set('test', '213');
 
+        return format_response(Code::SUCCESS, $this->container->redis->get('test'));
     }
 }

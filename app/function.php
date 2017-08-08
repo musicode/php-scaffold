@@ -51,7 +51,7 @@ function get_timestamp() {
  * @param $data
  * @param $message
  */
-function format_response($code, $data, $message = '') {
+function format_response($code, $data = [], $message = '') {
     return [
         'code' => $code,
         'data' => $data,
@@ -66,23 +66,32 @@ function format_response($code, $data, $message = '') {
  * @param $code 请用 App\Constant\Code 里面的常量
  * @param $list 当前页的数据
  * @param $page 当前页码
- * @param $pageSize 每页多少条数据
- * @param $totalSize 总数据量
+ * @param $page_size 每页多少条数据
+ * @param $total_size 总数据量
  * @param $message
  */
-function format_list_response($code, $list, $page, $pageSize, $totalSize, $message = '') {
-    return [
-        'code' => $code,
-        'data' => [
+function format_list_response($code, $list, $page, $page_size, $total_size, $message = '') {
+    return format_response(
+        $code,
+        [
             'list' => $list,
             'pager' => [
                 'page' => $page,
-                'count' => ceil($totalSize / $pageSize),
-                'page_size' => $pageSize,
-                'total_size' => $totalSize,
+                'count' => ceil($total_size / $page_size),
+                'page_size' => $page_size,
+                'total_size' => $total_size,
             ]
         ],
-        'msg' => $message,
-        'ts' => get_timestamp(),
-    ];
+        $message
+    );
+}
+
+/**
+ * 出错的返回结构
+ *
+ * @param $code 请用 App\Constant\Code 里面的常量
+ * @param $message
+ */
+function format_error_response($code, $message) {
+    return format_response($code, [], $message);
 }

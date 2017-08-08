@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Constant;
-
 
 class Code {
 
@@ -13,5 +11,11 @@ class Code {
 
     // 参数非法
     const PARAM_INVALID = 401;
+
+    // 资源不存在
+    const RESOURCE_NOT_FOUND = 404;
+
+    // 资源已存在
+    const RESOURCE_EXISTS = 405;
 
 }
