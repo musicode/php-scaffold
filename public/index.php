@@ -14,6 +14,8 @@ use Monolog\Handler\BufferHandler;
 
 use Ramsey\Uuid\Uuid;
 use Underscore\Types\Strings;
+
+use App\Component\SmartyView;
 use App\Component\AggregateStreamHandler;
 
 // 预设环境
@@ -114,6 +116,17 @@ $container['redis'] = function ($container) {
     return new Predis\Client($options);
 
 };
+$container['view'] = function ($container) {
+
+    $settings = $container->get('settings')['view'];
+
+    return new SmartyView(
+        $settings['template_dir'],
+        $settings['compile_dir'],
+        $settings['cache_dir']
+    );
+
+};
 
 $app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));
 
@@ -150,14 +163,13 @@ $app->add(function (Request $request, Response $response, Callable $next) {
         // 一个请求映射一个 Action
         // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
-        $result = $action->execute();
+        $action->render(
+            $action->execute()
+        );
     }
     else {
-        $result = format_error_response(\App\Constant\Code::RESOURCE_NOT_FOUND, 'Action not found');
+        throw new Exception('Action not found', \App\Constant\Code::RESOURCE_NOT_FOUND);
     }
-
-    $this->logger->info('Execute result: ', $result);
-    $response->write(json_encode($result));
 
     // 正常结束的请求会打印 request end
     $this->logger->info('Request End');

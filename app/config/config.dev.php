@@ -23,5 +23,11 @@ return [
         'host' => '127.0.0.1',
         'port' => '6379',
         'password' => '',
+    ],
+
+    'view' => [
+        'template_dir' => DIR_APP . '/view',
+        'compile_dir' => DIR_ROOT . '/compile',
+        'cache_dir' => DIR_ROOT . '/cache',
     ]
 ];

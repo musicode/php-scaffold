@@ -2,6 +2,7 @@
 
 namespace App\Action;
 
+use App\Constant\RenderType;
 use Slim\Container;
 
 class BaseAction {
@@ -9,16 +10,30 @@ class BaseAction {
     /**
      * CI 容器
      *
-     * @type {Slim\Container}
+     * @var Slim\Container
      */
     protected $container;
 
     /**
      * 请求带来的参数
      *
-     * @type {Array}
+     * @var Array
      */
     protected $params;
+
+    /**
+     * 模板路径
+     *
+     * @var string
+     */
+    protected $renderTemplate;
+
+    /**
+     * 渲染方式，默认 json
+     *
+     * @var string
+     */
+    protected $renderType = RenderType::JSON;
 
     public function __construct(Container $container) {
 
@@ -45,7 +60,7 @@ class BaseAction {
      * @param $validators
      * @param $values
      * @param $stopOnError
-     * @return 当校验成功时，返回 true，校验失败时，返回错误信息的数组
+     * @return 校验成功时，返回 true，校验失败时，返回错误信息的数组
      */
     protected function validate($validators, $values, $stopOnError = true) {
 
@@ -68,6 +83,44 @@ class BaseAction {
 
         return $errors === false ? true : $errors;
 
+    }
+
+    public function render($result) {
+        $this->container->logger->info('Execute Result', $result);
+        switch ($this->renderType) {
+            case RenderType::HTML:
+                $this->renderHtml($result);
+                break;
+            case RenderType::JSON:
+                $this->renderJson($result);
+                break;
+            case RenderType::JSONP:
+                $this->renderJsonp($result);
+                break;
+        }
+    }
+
+    protected function renderHtml($result) {
+        $this->container->response->write(
+            $this->container->view->render(
+                $this->renderTemplate,
+                [
+                    'tpl_data' => $result['data']
+                ]
+            )
+        );
+    }
+
+    protected function renderJson($result) {
+        $this->container->response->write(
+            json_encode($result)
+        );
+    }
+
+    protected function renderJsonp($result) {
+        $this->container->response->write(
+            $this->params['callback'] . '(' .json_encode($result) . ')'
+        );
     }
 
 }
