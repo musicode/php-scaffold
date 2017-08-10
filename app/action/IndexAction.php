@@ -4,6 +4,7 @@ namespace App\Action;
 
 use App\Constant\Code;
 use App\Constant\RenderType;
+use App\Exception\DataException;
 use Respect\Validation\Validator;
 
 class IndexAction extends BaseAction {
@@ -24,7 +25,7 @@ class IndexAction extends BaseAction {
         );
 
         if ($result !== true) {
-            return format_response(Code::PARAM_INVALID, $result);
+            throw new DataException('Param invalid', Code::PARAM_INVALID, $result);
         }
 
         // 测试 db

@@ -15,7 +15,8 @@
         "psr-4": {
             "App\\Action\\": "app/action/",
             "App\\Constant\\": "app/constant/",
-            "App\\Component\\": "app/component/"
+            "App\\Component\\": "app/component/",
+            "App\\Exception\\": "app/exception/"
         }
     }
 }

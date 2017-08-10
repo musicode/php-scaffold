@@ -19,6 +19,8 @@ use App\Component\Security;
 use App\Component\SmartyView;
 use App\Component\AggregateStreamHandler;
 
+use App\Exception\DataException;
+
 // 预设环境
 date_default_timezone_set('asia/shanghai');
 
@@ -54,11 +56,15 @@ $container['errorHandler'] = function ($container) {
     return function (Request $request, Response $response, Exception $exception) use ($container) {
         $code = $exception->getCode();
         $message = $exception->getMessage();
-        $container->logger->error('Exception: [' . $code . '] ' . $message);
+        $data = null;
+        if ($exception instanceof DataException) {
+            $data = $exception->getData();
+        }
+        $container->logger->error('Exception: [' . $code . '] ' . $message, $data);
         $response->write(
-            json_encode(format_error_response($code, $message))
+            json_encode(format_response($code, $data, $message))
         );
-        return $response;
+        return $response->withHeader('Request-Id', ID_REQUEST);
     };
 };
 // 日志
@@ -144,9 +150,6 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
     $this->logger->info('Request Start');
 
-    // 方便 Nginx 日志和 php 日志串起来
-    $response = $response->withHeader('Request-Id', ID_REQUEST);
-
     $path = $request->getUri()->getPath();
 
     // 所有 Action 都位于 app/action 目录下
@@ -184,7 +187,8 @@ $app->add(function (Request $request, Response $response, Callable $next) {
     // 正常结束的请求会打印 request end
     $this->logger->info('Request End');
 
-    return $response;
+    // 方便 Nginx 日志和 php 日志串起来
+    return $response->withHeader('Request-Id', ID_REQUEST);
 
 });
 

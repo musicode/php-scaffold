@@ -85,13 +85,3 @@ function format_list_response($code, $list, $page, $page_size, $total_size, $mes
         $message
     );
 }
-
-/**
- * 出错的返回结构
- *
- * @param $code 请用 App\Constant\Code 里面的常量
- * @param $message
- */
-function format_error_response($code, $message) {
-    return format_response($code, [], $message);
-}
