@@ -2,6 +2,7 @@
 
 namespace App\Action;
 
+use App\Constant\Code;
 use App\Constant\RenderType;
 use Slim\Container;
 
@@ -87,16 +88,21 @@ class BaseAction {
 
     public function render($result) {
         $this->container->logger->info('Execute Result', $result);
-        switch ($this->renderType) {
-            case RenderType::HTML:
-                $this->renderHtml($result);
-                break;
-            case RenderType::JSON:
-                $this->renderJson($result);
-                break;
-            case RenderType::JSONP:
-                $this->renderJsonp($result);
-                break;
+        if ($result['code'] === Code::SUCCESS) {
+            switch ($this->renderType) {
+                case RenderType::HTML:
+                    $this->renderHtml($result);
+                    break;
+                case RenderType::JSON:
+                    $this->renderJson($result);
+                    break;
+                case RenderType::JSONP:
+                    $this->renderJsonp($result);
+                    break;
+            }
+        }
+        else {
+            $this->renderJson($result);
         }
     }
 
