@@ -15,6 +15,7 @@ use Monolog\Handler\BufferHandler;
 use Ramsey\Uuid\Uuid;
 use Underscore\Types\Strings;
 
+use App\Component\Security;
 use App\Component\SmartyView;
 use App\Component\AggregateStreamHandler;
 
@@ -48,6 +49,7 @@ $app = new \Slim\App([
 ]);
 
 $container = $app->getContainer();
+// 所有异常处理
 $container['errorHandler'] = function ($container) {
     return function (Request $request, Response $response, Exception $exception) use ($container) {
         $code = $exception->getCode();
@@ -59,6 +61,7 @@ $container['errorHandler'] = function ($container) {
         return $response;
     };
 };
+// 日志
 $container['logger'] = function ($container) {
 
     $request = $container->get('request');
@@ -85,6 +88,7 @@ $container['logger'] = function ($container) {
     return $logger;
 
 };
+// Mysql
 $container['db'] = function ($container) {
 
     $settings = $container->get('settings')['db'];
@@ -98,6 +102,7 @@ $container['db'] = function ($container) {
     return new FluentPDO($pdo);
 
 };
+// Redis
 $container['redis'] = function ($container) {
 
     $settings = $container->get('settings')['redis'];
@@ -116,6 +121,7 @@ $container['redis'] = function ($container) {
     return new Predis\Client($options);
 
 };
+// 模板引擎
 $container['view'] = function ($container) {
 
     $settings = $container->get('settings')['view'];
@@ -126,6 +132,10 @@ $container['view'] = function ($container) {
         $settings['cache_dir']
     );
 
+};
+// 密码加密
+$container['security'] = function ($container) {
+    return new Security();
 };
 
 $app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));

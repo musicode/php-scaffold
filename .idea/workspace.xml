@@ -26,8 +26,10 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3475">
-              <folding />
+            <state line="187" column="0" selection-start="4562" selection-end="4562" vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="3622">
+              <folding>
+                <element signature="e#84#106#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,7 +37,7 @@
       <file leaf-file-name="SmartyView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/component/SmartyView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="33" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1510">
+            <state line="27" column="33" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1507">
               <folding />
             </state>
           </provider>
@@ -44,16 +46,25 @@
       <file leaf-file-name="20.log" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/dev/2017-08-09/20.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="0" selection-start="26016" selection-end="26016" vertical-scroll-proportion="0.0" vertical-offset="3933" max-vertical-offset="5155">
+            <state line="190" column="0" selection-start="26200" selection-end="26200" vertical-scroll-proportion="0.0" vertical-offset="2373" max-vertical-offset="3595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="32" selection-end="32" vertical-scroll-proportion="0.06122449" vertical-offset="0" max-vertical-offset="765">
+            <state line="3" column="7" selection-start="32" selection-end="32" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="762">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/component/Security.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="14" selection-start="39" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1057">
               <folding />
             </state>
           </provider>
@@ -62,7 +73,7 @@
       <file leaf-file-name="BaseAction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="5" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2620">
+            <state line="85" column="5" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2617">
               <folding>
                 <element signature="e#30#58#0" expanded="true" />
               </folding>
@@ -79,15 +90,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Smarty.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/smarty/smarty/libs/Smarty.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="6" selection-start="4072" selection-end="4072" vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="23524">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.dev.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.dev.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexAction.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IndexAction.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="1360">
+            <state line="13" column="31" selection-start="281" selection-end="281" vertical-scroll-proportion="0.11228534" vertical-offset="110" max-vertical-offset="1357">
               <folding>
                 <element signature="e#30#52#0" expanded="true" />
               </folding>
@@ -111,7 +113,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="865">
+            <state line="8" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862">
               <folding />
             </state>
           </provider>
@@ -150,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/function.php" />
         <option value="$PROJECT_DIR$/app/component/Smarty.php" />
         <option value="$PROJECT_DIR$/app/constant/RenderType.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/action/IndexAction.php" />
         <option value="$PROJECT_DIR$/app/component/SmartyView.php" />
         <option value="$PROJECT_DIR$/app/view/index.html" />
@@ -158,13 +159,15 @@
         <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
         <option value="$PROJECT_DIR$/log/dev/2017-08-09/20.log" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/component/Security.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1887" />
-    <option name="y" value="89" />
+    <option name="x" value="1615" />
+    <option name="y" value="156" />
     <option name="width" value="1473" />
     <option name="height" value="898" />
   </component>
@@ -321,6 +324,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../finstao/jrd" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -348,8 +352,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1887" y="89" width="1473" height="898" extended-state="0" />
-    <editor active="false" />
+    <frame x="1615" y="156" width="1473" height="898" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -389,11 +393,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1943" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../finstao/jrd/api/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="254" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2591">
@@ -659,22 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="1360">
-          <folding>
-            <element signature="e#30#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.dev.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="2" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1225">
@@ -682,16 +665,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/SmartyView.php">
+    <entry file="file://$PROJECT_DIR$/log/dev/2017-08-09/20.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1510">
+        <state line="190" column="0" selection-start="26200" selection-end="26200" vertical-scroll-proportion="0.0" vertical-offset="2373" max-vertical-offset="3595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="7" selection-start="32" selection-end="32" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="762">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/Security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="39" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1057">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3475">
+        <state line="187" column="0" selection-start="4562" selection-end="4562" vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="3622">
+          <folding>
+            <element signature="e#84#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/SmartyView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="33" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1510">
           <folding />
         </state>
       </provider>
@@ -705,17 +718,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/dev/2017-08-09/20.log">
+    <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="0" selection-start="26016" selection-end="26016" vertical-scroll-proportion="0.0" vertical-offset="3933" max-vertical-offset="5155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="32" selection-end="32" vertical-scroll-proportion="0.06122449" vertical-offset="0" max-vertical-offset="765">
-          <folding />
+        <state line="13" column="31" selection-start="281" selection-end="281" vertical-scroll-proportion="0.11228534" vertical-offset="110" max-vertical-offset="1357">
+          <folding>
+            <element signature="e#30#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
