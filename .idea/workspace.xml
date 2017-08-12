@@ -82,7 +82,7 @@
       <file leaf-file-name="DataException.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/exception/DataException.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="15" selection-start="22" selection-end="22" vertical-scroll-proportion="0.03963012" vertical-offset="0" max-vertical-offset="997">
+            <state line="2" column="15" selection-start="22" selection-end="22" vertical-scroll-proportion="0.04076087" vertical-offset="0" max-vertical-offset="976">
               <folding />
             </state>
           </provider>
@@ -166,10 +166,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1628" />
-    <option name="y" value="155" />
-    <option name="width" value="1473" />
-    <option name="height" value="898" />
+    <option name="x" value="27" />
+    <option name="y" value="23" />
+    <option name="width" value="1413" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -352,7 +352,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1628" y="155" width="1473" height="898" extended-state="0" />
+    <frame x="27" y="23" width="1413" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -361,7 +361,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26378226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27530953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -738,7 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/exception/DataException.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="15" selection-start="22" selection-end="22" vertical-scroll-proportion="0.03963012" vertical-offset="0" max-vertical-offset="997">
+        <state line="2" column="15" selection-start="22" selection-end="22" vertical-scroll-proportion="0.04076087" vertical-offset="0" max-vertical-offset="976">
           <folding />
         </state>
       </provider>
