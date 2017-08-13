@@ -56,11 +56,11 @@ $container['errorHandler'] = function ($container) {
     return function (Request $request, Response $response, Exception $exception) use ($container) {
         $code = $exception->getCode();
         $message = $exception->getMessage();
-        $data = null;
+        $data = [];
         if ($exception instanceof DataException) {
             $data = $exception->getData();
         }
-        $container->logger->error('Exception: [' . $code . '] ' . $message, $data);
+        $container->logger->error('Exception: ' . $code . ' ' . $message, $data);
         $response->write(
             json_encode(format_response($code, $data, $message))
         );
@@ -176,9 +176,13 @@ $app->add(function (Request $request, Response $response, Callable $next) {
         // 一个请求映射一个 Action
         // 通常 Action 是非常薄的一层，仅用于权限、参数校验，完成所有的前置条件后，通过调用 service 层实现业务逻辑
         $action = new $ActionClass($this);
-        $action->render(
-            $action->execute()
-        );
+        $result = $action->execute();
+        if ($result instanceof Response) {
+            $response = $result;
+        }
+        else {
+            $action->render($result);
+        }
     }
     else {
         throw new Exception('Action not found', \App\Constant\Code::RESOURCE_NOT_FOUND);

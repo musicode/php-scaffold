@@ -86,6 +86,10 @@ class BaseAction {
 
     }
 
+    public function redirect($uri) {
+        return $this->container->response->withStatus(302)->withHeader('Location', $uri);
+    }
+
     public function render($result) {
         $this->container->logger->info('Execute Result', $result);
         if ($result['code'] === Code::SUCCESS) {
