@@ -144,7 +144,7 @@ $container['security'] = function ($container) {
     return new Security();
 };
 
-$app->add(function (Request $request, Response $response, Callable $next) {
+$app->add(function (Request $request, Response $response) {
 
     $this->logger->info('Request Start');
 
@@ -190,12 +190,11 @@ $app->add(function (Request $request, Response $response, Callable $next) {
     $this->logger->info('Request End');
 
     // 方便 Nginx 日志和 php 日志串起来
-    return $response->withHeader('Request-Id', ID_REQUEST);
+    $response = $response->withHeader('Request-Id', ID_REQUEST);
+
+    return $response;
 
 });
-
-// 后注册先执行
-$app->add(new RKA\Middleware\IpAddress(true));
 
 $app->run();
 

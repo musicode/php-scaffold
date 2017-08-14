@@ -23,7 +23,7 @@ class AggregateStreamHandler extends StreamHandler {
             date('Y-m-d H:i:s', TIME_REQUEST_START / 1000),
             number_format(get_timestamp() - TIME_REQUEST_START),
             ID_REQUEST,
-            $request->getAttribute('ip_address'),
+            get_client_ip($request->getServerParams(), $request, true),
             $request->getMethod(),
             $request->getUri()->getPath()
         );

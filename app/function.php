@@ -45,6 +45,66 @@ function get_timestamp() {
 }
 
 /**
+ * 校验 IP
+ *
+ * @return {boolean}
+ */
+function validate_ip($ip) {
+    $flags = FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6;
+    return filter_var($ip, FILTER_VALIDATE_IP, $flags) !== false;
+}
+
+/**
+ * 获取客户端的 IP
+ *
+ * @param {Array} $servers
+ * @return {int}
+ */
+function get_client_ip($servers, $request = null, $checkProxyHeaders = false, $trustedProxies = null) {
+
+    if (isset($servers['REMOTE_ADDR']) && validate_ip($servers['REMOTE_ADDR'])) {
+        $ip = $servers['REMOTE_ADDR'];
+    }
+
+    if ($checkProxyHeaders && !empty($trustedProxies)) {
+        if (!in_array($ip, $trustedProxies)) {
+            $checkProxyHeaders = false;
+        }
+    }
+
+    if ($checkProxyHeaders) {
+        $headersToInspect = [
+            'Forwarded',
+            'X-Forwarded-For',
+            'X-Forwarded',
+            'X-Cluster-Client-Ip',
+            'Client-Ip',
+        ];
+        foreach ($headersToInspect as $header) {
+            if ($request->hasHeader($header)) {
+                $items = explode(',', $request->getHeaderLine($header));
+                $ip = trim($items[0]);
+                if (ucfirst($header) == 'Forwarded') {
+                    foreach (explode(';', $ip) as $headerPart) {
+                        if (strtolower(substr($headerPart, 0, 4)) == 'for=') {
+                            $for = explode(']', $headerPart);
+                            $ip = trim(substr($for[0], 4), " \t\n\r\0\x0B" . "\"[]");
+                            break;
+                        }
+                    }
+                }
+                if (validate_ip($ip)) {
+                    break;
+                }
+            }
+        }
+    }
+
+    return $ip;
+
+}
+
+/**
  * 获取返回的 json 数据
  *
  * @param $code 请用 App\Constant\Code 里面的常量
