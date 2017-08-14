@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="9" selection-start="4574" selection-end="4574" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3721">
+            <state line="54" column="24" selection-start="1135" selection-end="1147" vertical-scroll-proportion="-4.2727275" vertical-offset="2925" max-vertical-offset="3570">
               <folding>
                 <element signature="e#84#106#0" expanded="true" />
               </folding>
@@ -34,60 +34,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="17.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/dev/2017-08-13/17.log">
+      <file leaf-file-name="App.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/App.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="805">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Security.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/component/Security.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1036">
+            <state line="638" column="24" selection-start="21580" selection-end="21580" vertical-scroll-proportion="-66.0" vertical-offset="7515" max-vertical-offset="10230">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Response.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php">
+      <file leaf-file-name="21.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/dev/2017-08-14/21.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="394" column="7" selection-start="12029" selection-end="12029" vertical-scroll-proportion="0.0" vertical-offset="5490" max-vertical-offset="7771">
+            <state line="139" column="25" selection-start="14247" selection-end="14247" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2888">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseAction.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
+      <file leaf-file-name="IpAddress.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/akrabat/rka-ip-address-middleware/src/IpAddress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="18" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.4701087" vertical-offset="569" max-vertical-offset="2941">
-              <folding>
-                <element signature="e#30#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="14.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/dev/2017-08-14/14.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="41" selection-start="5164" selection-end="5164" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1533">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/constant/UserType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="976">
+            <state line="93" column="13" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3323">
               <folding />
             </state>
           </provider>
@@ -96,27 +64,7 @@
       <file leaf-file-name="AggregateStreamHandler.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/component/AggregateStreamHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="33" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1351">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexAction.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/action/IndexAction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1351">
-              <folding>
-                <element signature="e#30#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="56" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1951">
+            <state line="22" column="29" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1373">
               <folding />
             </state>
           </provider>
@@ -165,15 +113,16 @@
         <option value="$PROJECT_DIR$/app/function.php" />
         <option value="$PROJECT_DIR$/log/dev/2017-08-13/17.log" />
         <option value="$PROJECT_DIR$/app/action/IndexAction.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
+        <option value="$PROJECT_DIR$/vendor/akrabat/rka-ip-address-middleware/src/IpAddress.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1656" />
-    <option name="y" value="192" />
+    <option name="x" value="1488" />
+    <option name="y" value="98" />
     <option name="width" value="1413" />
     <option name="height" value="877" />
   </component>
@@ -219,6 +168,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akrabat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rka-ip-address-middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-scaffold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="akrabat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rka-ip-address-middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,42 +337,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exception" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-scaffold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="constant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-scaffold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -420,25 +395,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1656" y="192" width="1413" height="877" extended-state="0" />
+    <frame x="1488" y="98" width="1413" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30318472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27530953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27530953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3044586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -461,16 +436,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Body.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="961" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/dev/2017-08-07/00.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="0" selection-start="11712" selection-end="11712" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="3571" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/dev/2017-08-07/10.log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="37" selection-start="1517" selection-end="1517" vertical-scroll-proportion="-12.115385" vertical-offset="0" max-vertical-offset="1235" />
@@ -539,13 +504,6 @@
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/akrabat/rka-ip-address-middleware/src/IpAddress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="20" selection-start="3854" selection-end="3854" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="3323">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
@@ -760,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/AggregateStreamHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1351">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/dev/2017-08-13/17.log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="805">
@@ -781,15 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1036">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="9" selection-start="4574" selection-end="4574" vertical-scroll-proportion="0.0" vertical-offset="2400" max-vertical-offset="3721">
-          <folding>
-            <element signature="e#84#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,9 +753,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="18" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.4701087" vertical-offset="569" max-vertical-offset="2941">
+        <state line="61" column="18" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2941">
           <folding>
             <element signature="e#30#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/dev/2017-08-14/21.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="25" selection-start="14247" selection-end="14247" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/AggregateStreamHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1373">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/akrabat/rka-ip-address-middleware/src/IpAddress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="13" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/slim/slim/Slim/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="638" column="24" selection-start="21580" selection-end="21580" vertical-scroll-proportion="-66.0" vertical-offset="7515" max-vertical-offset="10230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="24" selection-start="1135" selection-end="1147" vertical-scroll-proportion="-4.2727275" vertical-offset="2925" max-vertical-offset="3570">
+          <folding>
+            <element signature="e#84#106#0" expanded="true" />
           </folding>
         </state>
       </provider>

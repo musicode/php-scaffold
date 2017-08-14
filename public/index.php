@@ -144,8 +144,6 @@ $container['security'] = function ($container) {
     return new Security();
 };
 
-$app->add(new RKA\Middleware\IpAddress(true, ['10.0.0.1', '10.0.0.2']));
-
 $app->add(function (Request $request, Response $response, Callable $next) {
 
     $this->logger->info('Request Start');
@@ -196,5 +194,13 @@ $app->add(function (Request $request, Response $response, Callable $next) {
 
 });
 
+// 后注册先执行
+$app->add(new RKA\Middleware\IpAddress(true));
+
 $app->run();
 
+/**
+ * 这个架构还是有问题的
+ *
+ * 1. request 和 response 可以不断经过中间件修改，但是容器拿到的还是最初的对象
+ */
