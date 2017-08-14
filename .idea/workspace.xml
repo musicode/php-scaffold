@@ -34,15 +34,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="17.log" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="17.log" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/dev/2017-08-13/17.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="805">
+            <state line="9" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="805">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/component/Security.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1036">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -55,22 +64,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseAction.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BaseAction.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="37" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2746">
+            <state line="111" column="33" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.9375" vertical-offset="975" max-vertical-offset="2716">
               <folding>
                 <element signature="e#30#52#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Env.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/constant/Env.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="10" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,17 +164,17 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/exception/DataException.php" />
         <option value="$PROJECT_DIR$/app/function.php" />
-        <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/action/IndexAction.php" />
         <option value="$PROJECT_DIR$/log/dev/2017-08-13/17.log" />
+        <option value="$PROJECT_DIR$/app/action/BaseAction.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="27" />
-    <option name="y" value="23" />
+    <option name="x" value="1769" />
+    <option name="y" value="161" />
     <option name="width" value="1413" />
     <option name="height" value="877" />
   </component>
@@ -399,7 +399,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="23" width="1413" height="877" extended-state="0" />
+    <frame x="1769" y="161" width="1413" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/component/Security.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1057">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="10" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1762">
@@ -753,15 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="37" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2746">
-          <folding>
-            <element signature="e#30#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="59" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="3721">
@@ -790,12 +774,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/log/dev/2017-08-13/17.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
+        <state line="9" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="805">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/component/Security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1036">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/action/BaseAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="33" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.9375" vertical-offset="975" max-vertical-offset="2716">
+          <folding>
+            <element signature="e#30#52#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

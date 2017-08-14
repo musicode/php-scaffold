@@ -92,45 +92,43 @@ class BaseAction {
 
     public function render($result) {
         $this->container->logger->info('Execute Result', $result);
+        $content = null;
         if ($result['code'] === Code::SUCCESS) {
             switch ($this->renderType) {
                 case RenderType::HTML:
-                    $this->renderHtml($result);
+                    $content = $this->renderHtml($result);
                     break;
                 case RenderType::JSON:
-                    $this->renderJson($result);
+                    $content = $this->renderJson($result);
                     break;
                 case RenderType::JSONP:
-                    $this->renderJsonp($result);
+                    $content = $this->renderJsonp($result);
                     break;
             }
         }
         else {
-            $this->renderJson($result);
+            $content = $this->renderJson($result);
+        }
+        if (!is_null($content)) {
+            $this->container->response->write($content);
         }
     }
 
     protected function renderHtml($result) {
-        $this->container->response->write(
-            $this->container->view->render(
-                $this->renderTemplate,
-                [
-                    'tpl_data' => $result['data']
-                ]
-            )
+        return $this->container->view->render(
+            $this->renderTemplate,
+            [
+                'tpl_data' => $result['data']
+            ]
         );
     }
 
     protected function renderJson($result) {
-        $this->container->response->write(
-            json_encode($result)
-        );
+        return json_encode($result);
     }
 
     protected function renderJsonp($result) {
-        $this->container->response->write(
-            $this->params['callback'] . '(' .json_encode($result) . ')'
-        );
+        return $this->params['callback'] . '(' .json_encode($result) . ')';
     }
 
 }
