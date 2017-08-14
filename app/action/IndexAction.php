@@ -31,7 +31,7 @@ class IndexAction extends BaseAction {
         // 测试 db
         $query = $this->container->db->from('common_area')->where('id < ?', 1010);
 
-        return format_response(Code::SUCCESS, $query->fetchAll());
+        $this->data['list'] = $query->fetchAll();
 
         // 测试 redis
 //        $this->container->redis->set('test', '213');

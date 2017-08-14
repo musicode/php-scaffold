@@ -4,6 +4,7 @@ namespace App\Action;
 
 use App\Constant\Code;
 use App\Constant\RenderType;
+use Ramsey\Uuid\Uuid;
 use Slim\Container;
 
 class BaseAction {
@@ -36,6 +37,13 @@ class BaseAction {
      */
     protected $renderType = RenderType::JSON;
 
+    /**
+     * 处理结果的数据
+     *
+     * @var array
+     */
+    protected $data = [];
+
     public function __construct(Container $container) {
 
         $this->container = $container;
@@ -47,8 +55,21 @@ class BaseAction {
         // 对于非浏览器，通过参数传递
         // 对于浏览器，一般会存在 cookie 中，而不需要传参
         if (!isset($params['access_token'])) {
-            $params['access_token'] = $container->request->getCookieParam('access_token');
+            $accessToken = $container->request->getCookieParam('access_token');
+            if (is_null($accessToken)) {
+                $this->data['access_token'] = Uuid::uuid1()->getHex();
+            }
+            else {
+                $params['access_token'] = $accessToken;
+            }
         }
+        if (isset($params['renderType'])) {
+            $this->renderType = $params['renderType'];
+        }
+        else if (isset($params['callback'])) {
+            $this->renderType = RenderType::JSONP;
+        }
+
         $this->params = $params;
 
         $container->logger->info('Request Params', $params);
@@ -90,45 +111,39 @@ class BaseAction {
         return $this->container->response->withStatus(302)->withHeader('Location', $uri);
     }
 
-    public function render($result) {
-        $this->container->logger->info('Execute Result', $result);
-        $content = null;
-        if ($result['code'] === Code::SUCCESS) {
-            switch ($this->renderType) {
-                case RenderType::HTML:
-                    $content = $this->renderHtml($result);
-                    break;
-                case RenderType::JSON:
-                    $content = $this->renderJson($result);
-                    break;
-                case RenderType::JSONP:
-                    $content = $this->renderJsonp($result);
-                    break;
-            }
+    public function render() {
+        $this->container->logger->info('Execute Result', $this->data);
+        switch ($this->renderType) {
+            case RenderType::HTML:
+                $content = $this->renderHtml();
+                break;
+            case RenderType::JSON:
+                $content = $this->renderJson();
+                break;
+            case RenderType::JSONP:
+                $content = $this->renderJsonp();
+                break;
         }
-        else {
-            $content = $this->renderJson($result);
-        }
-        if (!is_null($content)) {
-            $this->container->response->write($content);
-        }
+        $this->container->response->write($content);
     }
 
-    protected function renderHtml($result) {
+    protected function renderHtml() {
         return $this->container->view->render(
             $this->renderTemplate,
             [
-                'tpl_data' => $result['data']
+                'tpl_data' => $this->data
             ]
         );
     }
 
-    protected function renderJson($result) {
-        return json_encode($result);
+    protected function renderJson() {
+        return json_encode(
+            format_response(Code::SUCCESS, $this->data)
+        );
     }
 
-    protected function renderJsonp($result) {
-        return $this->params['callback'] . '(' .json_encode($result) . ')';
+    protected function renderJsonp() {
+        return $this->params['callback'] . '(' . $this->renderJson() . ');';
     }
 
 }

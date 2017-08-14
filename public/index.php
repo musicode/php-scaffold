@@ -181,7 +181,7 @@ $app->add(function (Request $request, Response $response, Callable $next) {
             $response = $result;
         }
         else {
-            $action->render($result);
+            $action->render();
         }
     }
     else {
