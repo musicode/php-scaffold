@@ -179,7 +179,7 @@ $app->add(function (Request $request, Response $response) {
             $response = $result;
         }
         else {
-            $action->render();
+            $action->render($response);
         }
     }
     else {

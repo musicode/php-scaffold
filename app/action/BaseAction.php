@@ -111,7 +111,7 @@ class BaseAction {
         return $this->container->response->withStatus(302)->withHeader('Location', $uri);
     }
 
-    public function render() {
+    public function render($response) {
         $this->container->logger->info('Execute Result', $this->data);
         switch ($this->renderType) {
             case RenderType::HTML:
@@ -124,7 +124,7 @@ class BaseAction {
                 $content = $this->renderJsonp();
                 break;
         }
-        $this->container->response->write($content);
+        $response->write($content);
     }
 
     protected function renderHtml() {
