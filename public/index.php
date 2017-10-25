@@ -10,6 +10,9 @@ use Slim\Http\Response;
 use Ramsey\Uuid\Uuid;
 use Underscore\Types\Strings;
 
+use App\Constant\Code;
+
+
 // 预设环境
 date_default_timezone_set('asia/shanghai');
 
@@ -85,7 +88,7 @@ $app->add(function (Request $request, Response $response) {
         }
     }
     else {
-        throw new Exception('Action not found', \App\Constant\Code::RESOURCE_NOT_FOUND);
+        throw new Exception('Action not found', Code::RESOURCE_NOT_FOUND);
     }
 
     // 正常结束的请求会打印 request end

@@ -15,6 +15,8 @@ use App\Component\AggregateStreamHandler;
 
 use App\Exception\DataException;
 
+use \Redis;
+
 return [
     // 所有异常处理
     'errorHandler' => function ($container) {
@@ -77,19 +79,21 @@ return [
     'redis' => function ($container) {
 
         $settings = $container->get('settings')['redis'];
+        $logger = $container->logger;
 
-        $options = [
-            'scheme' => 'tcp',
-            'host'   => $settings['host'],
-            'port'   => $settings['port'],
-        ];
-
-        // redis 比较奇怪，传了空密码会报错
-        if ($settings['password'] !== '') {
-            $options['password'] = $settings['password'];
+        $redis = new Redis();
+        if ($redis->connect($settings['host'], $settings['port'])) {
+            if ($settings['password']) {
+                if ($redis->auth($settings['password'])) {
+                  $logger->error('Redis auth failed', $settings);
+                }
+            }
+        }
+        else {
+            $logger->error('Redis connect failed', $settings);
         }
 
-        return new Predis\Client($options);
+        return $redis;
 
     },
     // 模板引擎

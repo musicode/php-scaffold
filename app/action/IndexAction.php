@@ -29,12 +29,12 @@ class IndexAction extends BaseAction {
         }
 
         // 测试 db
-        $query = $this->container->db->from('common_area')->where('id < ?', 1010);
+        // $query = $this->container->db->from('common_area')->where('id < ?', 1010);
 
-        $this->data['list'] = $query->fetchAll();
+        // $this->data['list'] = $query->fetchAll();
 
         // 测试 redis
-//        $this->container->redis->set('test', '213');
+        $this->container->redis->set('test', '213');
 //
 //        return format_response(Code::SUCCESS, $this->container->redis->get('test'));
 
