@@ -1,25 +1,14 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'app/function.php';
+require '../vendor/autoload.php';
+require '../app/function.php';
 
 // 不写类型没有代码提示...
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-// 日志库
-use Monolog\Logger;
-use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\BufferHandler;
-
 use Ramsey\Uuid\Uuid;
 use Underscore\Types\Strings;
-
-use App\Component\Security;
-use App\Component\SmartyView;
-use App\Component\AggregateStreamHandler;
-
-use App\Exception\DataException;
 
 // 预设环境
 date_default_timezone_set('asia/shanghai');
@@ -47,102 +36,15 @@ define('TIME_REQUEST_START', get_timestamp());
 define('ID_REQUEST', Uuid::uuid1()->getHex());
 
 $app = new \Slim\App([
-    'settings' => require_file_by_env('app/config/config.php')
+    'settings' => require_file_by_env(DIR_ROOT . '/app/config/config.php')
 ]);
 
 $container = $app->getContainer();
-// 所有异常处理
-$container['errorHandler'] = function ($container) {
-    return function (Request $request, Response $response, Exception $exception) use ($container) {
-        $code = $exception->getCode();
-        $message = $exception->getMessage();
-        $data = [];
-        if ($exception instanceof DataException) {
-            $data = $exception->getData();
-        }
-        $container->logger->error('Exception: ' . $code . ' ' . $message, $data);
-        $response->write(
-            json_encode(format_response($code, $data, $message))
-        );
-        return $response->withHeader('Request-Id', ID_REQUEST);
-    };
-};
-// 日志
-$container['logger'] = function ($container) {
 
-    $request = $container->get('request');
-
-    $settings = $container->get('settings')['logger'];
-
-    // 以日期为目录
-    // 每一天的目录下按小时拆分文件
-    $path = $settings['dir'] . DS
-        . ENV . DS
-        . date('Y-m-d') . DS
-        . date('H') . '.log';
-
-    $logger = new Logger($settings['name']);
-
-    $handler = new AggregateStreamHandler($path, $settings['level'], $request);
-
-    $handler->setFormatter(
-        new LineFormatter("           [%datetime%][%level_name%] %message% %context% %extra%\n", 'H:i:s', true, true)
-    );
-
-    $logger->pushHandler(new BufferHandler($handler));
-
-    return $logger;
-
-};
-// Mysql
-$container['db'] = function ($container) {
-
-    $settings = $container->get('settings')['db'];
-
-    $pdo = new PDO(
-        "mysql:host=${settings['host']};port=${settings['port']};dbname=${settings['dbname']};charset=${settings['charset']}",
-        $settings['username'],
-        $settings['password']
-    );
-
-    return new FluentPDO($pdo);
-
-};
-// Redis
-$container['redis'] = function ($container) {
-
-    $settings = $container->get('settings')['redis'];
-
-    $options = [
-        'scheme' => 'tcp',
-        'host'   => $settings['host'],
-        'port'   => $settings['port'],
-    ];
-
-    // redis 比较奇怪，传了空密码会报错
-    if ($settings['password'] !== '') {
-        $options['password'] = $settings['password'];
-    }
-
-    return new Predis\Client($options);
-
-};
-// 模板引擎
-$container['view'] = function ($container) {
-
-    $settings = $container->get('settings')['view'];
-
-    return new SmartyView(
-        $settings['template_dir'],
-        $settings['compile_dir'],
-        $settings['cache_dir']
-    );
-
-};
-// 密码加密
-$container['security'] = function ($container) {
-    return new Security();
-};
+$services = require DIR_APP . '/service.php';
+foreach ($services as $key => $value) {
+  $container[ $key ] = $value;
+}
 
 $app->add(function (Request $request, Response $response) {
 
