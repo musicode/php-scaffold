@@ -11,11 +11,11 @@ return [
     ],
 
     'db' => [
-        'host' => '127.0.0.1',
+        'host' => 'mysql',
         'port' => 3306,
-        'username' => 'root',
-        'password' => '',
-        'dbname' => 'jrd',
+        'username' => 'default',
+        'password' => 'secret',
+        'dbname' => 'default',
         'charset' => 'utf8mb4',
     ],
 

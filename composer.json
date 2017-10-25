@@ -14,7 +14,8 @@
             "App\\Action\\": "app/action/",
             "App\\Constant\\": "app/constant/",
             "App\\Component\\": "app/component/",
-            "App\\Exception\\": "app/exception/"
+            "App\\Exception\\": "app/exception/",
+            "App\\Service\\": "app/service/"
         }
     }
 }
